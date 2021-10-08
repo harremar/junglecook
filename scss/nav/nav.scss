@@ -1,0 +1,117 @@
+.logo {
+  position: fixed;
+  background-image: url(../images/logo.svg);
+  width: 167px;
+  height: 55px;
+  top: 50px;
+  left: 50px;
+}
+
+.link-nav {
+  position: fixed;
+  width: 550px;
+  height: 50px;
+  top: 50px;
+  right: 50px;
+  //   margin: 0 auto;
+  // background-color: navy;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    // background-color: yellow;
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    li {
+      list-style: none;
+      .underline {
+        border-bottom: black 3px solid;
+        // width: 50px;
+      }
+      a {
+        font-family: caveatR;
+        font-size: 25px;
+        text-decoration: none;
+        color: black;
+        // border-bottom: black 3px solid;
+      }
+      a:hover {
+        font-family: caveatB;
+      }
+    }
+  }
+
+  .btn {
+    width: 158px;
+    height: 58px;
+    border-radius: 26px;
+    background-color: $site-yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 10px 6px rgba($color: #000000, $alpha: 0.16);
+  }
+}
+
+nav {
+  display: none;
+  position: fixed;
+  top: 50px;
+  right: 30px;
+  width: 30px;
+  height: 20px;
+  #toggle-button {
+    img {
+      max-height: 30px;
+      max-width: 35px;
+      background-color: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #toggle-button {
+    display: flex;
+  }
+  .link-nav {
+    display: none;
+    width: 100%;
+    ul {
+      width: 100%;
+      flex-direction: column;
+    }
+    li {
+      text-align: center;
+      a {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+  .link-nav.active {
+    display: flex;
+  }
+  nav {
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .link-nav {
+    width: 450px;
+    a {
+      font-size: 20px;
+    }
+    .btn {
+      width: 120px;
+      height: 50px;
+    }
+  }
+}
